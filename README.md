@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
@@ -135,7 +135,7 @@ function Placeholder({ title }) {
 
 export default function PulsedBeautyApp() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -145,6 +145,6 @@ export default function PulsedBeautyApp() {
         <Route path="/faq" element={<Placeholder title="FAQ" />} />
         <Route path="/contact" element={<Placeholder title="Contact" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
